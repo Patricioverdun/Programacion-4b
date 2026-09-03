@@ -1,0 +1,141 @@
+* Selecciona TODOS los elementos de la página */
+* {
+    /* El ancho/alto de cada elemento incluye el padding y el borde */
+    box-sizing: border-box;
+    /* Elimina el margen externo de todos los elementos */
+    margin: 0;
+    /* Elimina el relleno interno de todos los elementos */
+    padding: 0;
+}
+
+/* Estilos para el <body> (el contenido visible de la página) */
+body {
+    /* Define la familia tipográfica del texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Color de fondo azul-grisáceo muy claro */
+    background: #f0f4f8;
+    /* Color del texto (gris oscuro) */
+    color: #222;
+    /* La altura mínima del body es toda la pantalla (100vh = 100% viewport) */
+    min-height: 100vh;
+    /* Activa Flexbox para acomodar los elementos */
+    display: flex;
+    /* Apila los elementos en columna (uno debajo del otro) */
+    flex-direction: column;
+    /* Centra los elementos horizontalmente */
+    align-items: center;
+    /* Espacio interno: 2rem arriba/abajo y 1rem a los costados */
+    padding: 2rem 1rem;
+}
+
+/* Estilos para el título principal <h1> */
+h1 {
+    /* Tamaño de la letra del título */
+    font-size: 2rem;
+    /* Color azul del título */
+    color: #0b5ed7;
+    /* Margen inferior (separación con lo que sigue) */
+    margin-bottom: 1.5rem;
+    /* Centra el texto del título */
+    text-align: center;
+}
+
+/* Estilos para el contenedor de los botones (.botones) */
+.botones {
+    /* Activa Flexbox para ordenar los botones */
+    display: flex;
+    /* Permite que los botones bajen a otra fila si no entran */
+    flex-wrap: wrap;
+    /* Separación de 1rem entre botones */
+    gap: 1rem;
+    /* Centra los botones horizontalmente */
+    justify-content: center;
+    /* Margen inferior para separar los botones del panel */
+    margin-bottom: 2rem;
+}
+
+/* Estilos para los <button> que están dentro de .botones */
+.botones button {
+    /* Color de fondo azul */
+    background: #0d6efd;
+    /* Texto blanco */
+    color: #fff;
+    /* Sin borde */
+    border: none;
+    /* Relleno interno: 0.8rem vertical y 1.5rem horizontal */
+    padding: 0.8rem 1.5rem;
+    /* Tamaño del texto del botón */
+    font-size: 1rem;
+    /* Esquinas redondeadas de 0.5rem */
+    border-radius: 0.5rem;
+    /* El cursor se vuelve una mano al pasar por encima */
+    cursor: pointer;
+    /* Transición suave (0.2s) al cambiar fondo o posición */
+    transition: background 0.2s, transform 0.2s;
+    /* Sombra azul debajo del botón */
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.25);
+}
+
+/* Estilos cuando el mouse pasa por encima de un botón (:hover) */
+.botones button:hover {
+    /* El fondo se vuelve un azul un poco más oscuro */
+    background: #0b5ed7;
+    /* El botón se eleva 3px hacia arriba */
+    transform: translateY(-3px);
+}
+
+/* Estilos para los paneles (los div que contienen las listas) */
+.panel {
+    /* Fondo blanco de la tarjeta */
+    background: #fff;
+    /* Esquinas redondeadas de 0.75rem */
+    border-radius: 0.75rem;
+    /* Relleno interno de 2rem por todos los lados */
+    padding: 2rem;
+    /* Ancho máximo de la tarjeta (600px) */
+    max-width: 600px;
+    /* Ocupa todo el ancho disponible hasta el máximo */
+    width: 100%;
+    /* Sombra grande y suave debajo de la tarjeta */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    /* Los paneles están OCULTOS por defecto */
+    display: none;
+}
+
+/* Estilos para el panel que tiene la clase "visible" */
+.panel.visible {
+    /* Muestra el panel que está activo */
+    display: block;
+}
+
+/* Estilos para el <h2> (título) dentro de un panel */
+.panel h2 {
+    /* Color azul del subtítulo */
+    color: #0b5ed7;
+    /* Margen inferior (separación con la lista) */
+    margin-bottom: 1rem;
+}
+
+/* Estilos para la lista <ul> dentro de un panel */
+.panel ul {
+    /* Sangría a la izquierda para ver las viñetas */
+    margin-left: 1.5rem;
+    /* Interlineado de la lista (espacio entre líneas) */
+    line-height: 1.8;
+}
+
+/* Estilos para el bloque de código <pre> dentro de un panel */
+.panel pre {
+    /* Fondo oscuro del bloque de código */
+    background: #212529;
+    /* Texto claro dentro del bloque */
+    color: #f8f9fa;
+    /* Relleno interno de 1rem */
+    padding: 1rem;
+    /* Esquinas redondeadas de 0.5rem */
+    border-radius: 0.5rem;
+    /* Si el código es largo, aparece barra de scroll horizontal */
+    overflow-x: auto;
+    /* Letra más chica para el código */
+    font-size: 0.85rem;
+}
